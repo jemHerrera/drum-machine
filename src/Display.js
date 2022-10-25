@@ -1,8 +1,6 @@
 function Display(props){
     return (
-        <div id="display">
-            hello from display
-        </div>
+        <div id="display">{props.displayed}</div>
     )
 }
 

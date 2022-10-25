@@ -1,8 +1,12 @@
 function DrumPad(props){
     return (
-        <div className="drum-pad">
-            hello drum-pad
-        </div>
+        <li 
+            id={props.id} 
+            className="drum-pad"
+            onClick={props.onClick}
+        >
+            {props.id}
+        </li>
     )
 }
 
