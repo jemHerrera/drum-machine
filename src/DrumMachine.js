@@ -48,12 +48,6 @@ class DrumMachine extends React.Component{
     window.addEventListener('keyup', this.handleKeyUp);
   }
 
-  componentDidUpdate(){
-    document.getElementById('root').classList.add('boom');
-      setTimeout(() => {document.getElementById('root').classList.remove('boom');
-    },500)
-  }
-
   render(){
     let drumPadsList = drumPads.map((drumPad, i) => this.renderDrumPad(i))
 
