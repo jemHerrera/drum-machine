@@ -3,10 +3,21 @@
 #display{
     font-family: 'Fira Code', monospace;
     font-weight: 800;
-    font-size: 7rem;
+    font-size: 6rem;
     color: $color-blue;
-    // background: -webkit-linear-gradient(0deg, $color-pink, $color-blue);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
+    font-style: italic;
     text-shadow: 0px 20px 100px $color-blue-shadow;
+
+
+    @include media-l{
+        font-size: 4rem;
+    }
+
+    @include media-m{
+        text-align:center;
+    }
+
+    @include media-xs{
+        font-size: 3rem;
+    }
 }
