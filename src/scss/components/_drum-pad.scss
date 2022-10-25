@@ -1,5 +1,32 @@
 @use '../abstracts/index' as *;
 
 .drum-pad{
-    color: $color-pink;
+    width: 100%;
+    height: 100%;
+    background-color: $color-pink;
+    list-style-type: none;
+    @include flex($align:center, $justify: center);
+    font-size: 5rem;
+    text-shadow: 4px -4px 0px $color-blue;
+    font-family: 'Fira Code', monospace;
+    font-weight: 800;
+    color: $color-dark2;
+    border-radius: 2rem;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 20px -20px 0px -4px $color-pink-shadow;
+    transition: all 100ms ease-in;
+
+    &.active{    
+        transform: translate(-24px, 20px) scale(1.05);
+        box-shadow: 32px -32px 5px -4px $color-blue-shadow;
+        background-color: $color-blue;
+        text-shadow: 5px -5px 0px $color-pink;
+        z-index: 1;
+    }
+
+    &:hover{
+        // transform: scale(1.01);
+        // box-shadow: 1px 1px 3px $color-pink-shadow;
+    }
 }

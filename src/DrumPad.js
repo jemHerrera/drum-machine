@@ -1,11 +1,12 @@
 function DrumPad(props){
     return (
         <li 
-            id={props.id} 
-            className="drum-pad"
+            id={props.content.id} 
+            className={`drum-pad${props.displayed === props.content.name ? ' active' : ''}`}
             onClick={props.onClick}
         >
-            {props.id}
+            {props.content.key}
+            <audio id={props.content.key} className="clip" src={props.content.audio}></audio>
         </li>
     )
 }

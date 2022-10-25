@@ -1,5 +1,37 @@
 @use '../abstracts/index' as *;
 
 #drum-machine{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+    justify-items: flex-start;
+    height: 100%;
 
+    header{
+        align-self:flex-start;
+        margin: 10rem 0 0 10rem;
+
+        h1{
+            font-family: 'Fira Code', monospace;
+            font-weight: 600;
+            font-size: 1.25rem;
+            font-style: italic;
+
+            span{
+                color: $color-light3;
+                font-size: 0.8rem;
+                font-weight: 400;
+                font-family: 'Fira Code', monospace;
+            }
+        }
+    }
+
+    .drum-pads{
+        height: 600px;
+        width: 600px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        transform: skew(0deg, 10deg);
+    }
 }

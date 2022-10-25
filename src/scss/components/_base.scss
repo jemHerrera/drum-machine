@@ -13,11 +13,19 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-html{
-    background-color: $color-dark0;
-}
-
 #root{
+    background-color: $color-dark1;
     height: 100vh;
     overflow: hidden;
+
+    @keyframes boom {
+        0% {background-color: $color-dark1;}
+        50% {background-color: rgb(45, 26, 53);}
+        100% {background-color: $color-dark1;}
+    }
+
+    &.boom{
+        animation-name: boom;
+        animation-duration: 500ms;
+    }
 }

@@ -7,7 +7,7 @@ class DrumMachine extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      displayed: ''
+      displayed: 'Heater 1'
     }
 
     this.handleKeyUp = this.handleKeyUp.bind(this);
@@ -18,7 +18,8 @@ class DrumMachine extends React.Component{
     return (
       <DrumPad
         key={drumPads[i].key}
-        id={drumPads[i].key}
+        content={drumPads[i]}
+        displayed={this.state.displayed}
         onClick={() => this.pressDrum(drumPads[i])}
       />
     )
@@ -36,7 +37,7 @@ class DrumMachine extends React.Component{
   }
 
   pressDrum(drumPad){
-    const audio = new Audio(drumPad.audio);
+    const audio = document.getElementById(drumPad.key);
     audio.play();
     this.setState({
       displayed: drumPad.name
@@ -47,16 +48,24 @@ class DrumMachine extends React.Component{
     window.addEventListener('keyup', this.handleKeyUp);
   }
 
+  componentDidUpdate(){
+    document.getElementById('root').classList.add('boom');
+      setTimeout(() => {document.getElementById('root').classList.remove('boom');
+    },500)
+  }
+
   render(){
     let drumPadsList = drumPads.map((drumPad, i) => this.renderDrumPad(i))
 
     return (
       <div id="drum-machine">
-        <h1>Drum Machine</h1>
+        <header>
+          <h1>Drum Machine <span>by Jem</span></h1>
+          <Display displayed={this.state.displayed}/>
+        </header>
         <ul className="drum-pads">
           {drumPadsList}
         </ul>
-        <Display displayed={this.state.displayed}/>
       </div>
     )
   }

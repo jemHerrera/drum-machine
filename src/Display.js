@@ -1,6 +1,6 @@
 function Display(props){
     return (
-        <div id="display">{props.displayed}</div>
+        <h2 id="display">{props.displayed}</h2>
     )
 }
 
