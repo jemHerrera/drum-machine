@@ -15,7 +15,7 @@
             font-size: 1.25rem;
 
             span{
-                color: $color-light3;
+                color: $color-pink;
                 font-style: italic;
                 font-size: 0.8rem;
                 font-weight: 400;
@@ -29,7 +29,7 @@
         width: 600px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        gap: 1.5rem;
         padding: 4rem;
         transform: skew(0deg, 10deg);
     }

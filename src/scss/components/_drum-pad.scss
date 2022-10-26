@@ -7,10 +7,8 @@
     list-style-type: none;
     @include flex($align:center, $justify: center);
     font-size: 5rem;
-    text-shadow: 4px -4px 0px $color-blue;
-    font-family: 'Fira Code', monospace;
     font-weight: 800;
-    color: rgb(39 30 109);
+    color: white;
     border-radius: 2rem;
     user-select: none;
     cursor: pointer;
@@ -19,9 +17,10 @@
 
     &.active{    
         transform: translate(-24px, 20px) scale(1.05);
-        box-shadow: 32px -32px 5px -4px $color-blue-shadow;
-        background-color: $color-blue;
-        text-shadow: 5px -5px 0px $color-pink;
+        box-shadow: 41px -39px 0px -7px $color-blue-shadow;
+        background: $color-blue;
+        text-shadow: none;
+        color:$color-pink;
         z-index: 1;
     }
 
@@ -30,7 +29,7 @@
         border-radius: 1rem;
         box-shadow: 10px -10px 0px -4px $color-pink-shadow;
         &.active{    
-            box-shadow: 29px -26px 5px -4px $color-blue-shadow;
+            box-shadow: 29px -26px 0px -4px $color-blue-shadow;
         }
     }
 }
